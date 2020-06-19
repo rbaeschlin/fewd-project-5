@@ -1,0 +1,17 @@
+/* ----- Global Styles ----- */
+
+* {
+  box-sizing: border-box;
+}
+
+/* ----- Containers ----- */
+
+.wrapper {
+  text-align: center;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
