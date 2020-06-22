@@ -14,9 +14,9 @@ searchBar.addEventListener("keyup", event => {
   for (let i = 0; i < images.length; i++) {
     const search = images[i].getAttribute("data-title");
     if (search.toLowerCase().indexOf(searchString) > -1) {
-      images[i].style.display = "";
+      images[i].parentNode.style.display = "";
     } else {
-      images[i].style.display = "none";
+      images[i].parentNode.style.display = "none";
     }
   }
 });
