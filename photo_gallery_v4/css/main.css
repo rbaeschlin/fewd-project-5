@@ -24,15 +24,42 @@ body {
 }
 
 .gallery {
-  width: 90%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 20px auto;
+  /* margin: 20px auto; */
 }
 
 .searchbar {
   width: 45%;
   padding: 10px;
   margin-top: 20px;
+}
+
+.img {
+  padding: 10px;
+}
+
+/* ----- Media Queries ----- */
+
+@media (min-width: 769px) {
+  .wrapper {
+    width: 90%;
+    max-width: 850px;
+    margin: 0 auto;
+  }
+
+  .img {
+    flex: 1 33.33%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .img {
+    flex-basis: 25%;
+  }
+
+  .wrapper {
+    max-width: 1050px;
+  }
 }

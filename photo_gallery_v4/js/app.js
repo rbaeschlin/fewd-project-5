@@ -1,5 +1,25 @@
 // Search to filter to certain images
 // return search value as lower case
-// compare search to data-title or data-alt for matches
+// loop through image's data titles
+// compare search to data-title for matches
 // display images matching search term
-// else display message no images found
+// else display no images
+
+const searchBar = document.getElementById("searchbar");
+
+searchBar.addEventListener("keyup", event => {
+  const searchString = event.target.value.toLowerCase();
+  console.log(searchString);
+
+  const images = document.getElementsByTagName("a");
+  console.log(images);
+
+  for (let i = 0; i < images.length; i++) {
+    const search = images[i].getAttribute("data-title");
+    if (search.toLowerCase().indexOf(searchString) > -1) {
+      images[i].style.display = "";
+    } else {
+      images[i].style.display = "none";
+    }
+  }
+});
