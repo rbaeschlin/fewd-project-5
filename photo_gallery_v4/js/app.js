@@ -9,10 +9,7 @@ const searchBar = document.getElementById("searchbar");
 
 searchBar.addEventListener("keyup", event => {
   const searchString = event.target.value.toLowerCase();
-  console.log(searchString);
-
   const images = document.getElementsByTagName("a");
-  console.log(images);
 
   for (let i = 0; i < images.length; i++) {
     const search = images[i].getAttribute("data-title");
